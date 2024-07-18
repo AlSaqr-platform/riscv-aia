@@ -11,8 +11,8 @@ import imsic_pkg::*;
 #(
     parameter imsic_cfg_t    ImsicCfg       =   DefaultImsicCfg,
     parameter protocol_cfg_t ProtocolCfg    =   DefaultImsicProtocolCfg,
-    parameter type           axi_req_t      =   ariane_axi::req_t,
-    parameter type           axi_resp_t     =   ariane_axi::resp_t   
+    parameter type           axi_req_t      =   logic,
+    parameter type           axi_resp_t     =   logic
 ) (
     input  logic                                i_clk,
     input  logic                                ni_rst,
@@ -21,8 +21,7 @@ import imsic_pkg::*;
     output imsic_ipfile_t[ImsicCfg.NrHarts-1:0] o_setipnum_we,
     // Bus Interface
     input  axi_req_t                            i_req,
-    output axi_resp_t                           o_resp            
-);
+    output axi_resp_t                           o_resp
 
     logic [31:0]   register_address;
     logic [31:0]   imsic_index;

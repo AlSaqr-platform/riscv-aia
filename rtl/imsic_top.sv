@@ -11,8 +11,8 @@ import imsic_pkg::*;
 #(
    parameter imsic_cfg_t          ImsicCfg         = DefaultImsicCfg,
    parameter protocol_cfg_t       ProtocolCfg      = DefaultImsicProtocolCfg,
-   parameter type                 axi_req_t        = ariane_axi::req_t ,
-   parameter type                 axi_resp_t       = ariane_axi::resp_t,
+   parameter type                 axi_req_t        = logic ,
+   parameter type                 axi_resp_t       = logic,
    // DO NOT EDIT BY PARAMETER
    parameter int unsigned         NR_INTP_FILES    = 2 + ImsicCfg.NrVSInptFiles,
    parameter int                  NR_INTP_PER_REG  = ImsicCfg.NrSourcesPerReg,
