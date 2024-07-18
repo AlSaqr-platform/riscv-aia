@@ -13,8 +13,8 @@ import imsic_protocol_pkg::*;
     parameter aplic_cfg_t          AplicCfg                = DefaultAplicCfg,
     parameter imsic_cfg_t          ImsicCfg                = DefaultImsicCfg,
     parameter protocol_cfg_t       ProtocolCfg             = DefaultImsicProtocolCfg,
-    parameter type                 axi_req_t               = ariane_axi::req_t ,
-    parameter type                 axi_resp_t              = ariane_axi::resp_t,
+    parameter type                 axi_req_t               = logic,
+    parameter type                 axi_resp_t              = logic,
     // DO NOT EDIT BY PARAMETER
     parameter int                  NR_REG                  = (AplicCfg.NrSources-1)/32,
     parameter int                  IMSICS_LEN              = $clog2(ImsicCfg.NrHarts)
