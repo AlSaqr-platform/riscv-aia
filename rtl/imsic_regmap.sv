@@ -22,7 +22,7 @@ import imsic_pkg::*;
     // Bus Interface
     input  axi_req_t                            i_req,
     output axi_resp_t                           o_resp
-
+);
     logic [31:0]   register_address;
     logic [31:0]   imsic_index;
     logic [31:0]   file_index;
