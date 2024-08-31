@@ -60,7 +60,7 @@ import aplic_domain_pkg::*;
             id: shortint'(RootdomainID),
             ParentID: int'(-1),
             NrChilds: shortint'(1),
-            ChildsIdx: '{default: '0},
+            ChildsIdx: '{0, 1},
             LevelMode: DOMAIN_IN_M_MODE,
             Addr: 32'hc000000
         };
