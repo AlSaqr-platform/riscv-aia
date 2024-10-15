@@ -21,6 +21,8 @@ import imsic_protocol_pkg::*;
    input  logic                                                      i_clk             ,
    input  logic                                                      ni_rst            ,
    input  logic [AplicCfg.NrSources-1:0]                             i_irq_sources     ,
+   // Logic locking
+   input logic [127:0]                                               aia_lock_xor_key_i,
    /** APLIC domain interface */
    input  reg_req_t                                                  i_req_cfg         ,
    output reg_rsp_t                                                  o_resp_cfg        ,
